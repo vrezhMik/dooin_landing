@@ -1,17 +1,37 @@
 <script setup>
 import Button from './ButtonComponent.vue'
+import HamburgerIcon from './Icons/HamburgerIcon.vue'
+import { ref, onMounted, onUnmounted } from 'vue'
+
+const isMobile = ref(window.innerWidth < 1000)
+
+const updateWidth = () => {
+  isMobile.value = window.innerWidth < 1000
+  console.log(isMobile.value)
+}
+
+onMounted(() => {
+  window.addEventListener('resize', updateWidth)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('resize', updateWidth)
+})
 </script>
 
 <template>
   <header :class="['container', 'flex', 'sora']">
     <nav :class="['header-menu', 'flex']">
       <a href="/"><span>D</span>ooin</a>
-      <a href="/">home</a>
-      <a href="#product">product</a>
-      <a href="#about">about</a>
+      <a href="/" v-if="!isMobile">home</a>
+      <a href="#product" v-if="!isMobile">product</a>
+      <a href="#about" v-if="!isMobile">about</a>
     </nav>
     <div :class="['']">
-      <Button name="Get Started"></Button>
+      <Button name="Get Started" v-if="!isMobile"></Button>
+      <button v-if="isMobile" :class="['hamburger']">
+        <HamburgerIcon />
+      </button>
     </div>
   </header>
 </template>
@@ -44,6 +64,17 @@ header {
         color: $primary-blue;
       }
     }
+  }
+}
+
+.hamburger {
+  width: 30px;
+  height: 30px;
+}
+
+@media (max-width: 1000px) {
+  header {
+    padding: 0;
   }
 }
 </style>
