@@ -7,7 +7,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: 'dooin_landing',
+  base: '/dooin_landing/', // Must match your repository name
   plugins: [vue(), vueJsx(), vueDevTools()],
   resolve: {
     alias: {
