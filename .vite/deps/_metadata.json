@@ -7,13 +7,13 @@
     "vue": {
       "src": "../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "bdc15bd4",
+      "fileHash": "68708e7e",
       "needsInterop": false
     },
     "pinia": {
       "src": "../../node_modules/pinia/dist/pinia.mjs",
       "file": "pinia.js",
-      "fileHash": "b0e9bdb6",
+      "fileHash": "973d7a08",
       "needsInterop": false
     }
   },
