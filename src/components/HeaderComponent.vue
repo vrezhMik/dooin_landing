@@ -14,12 +14,10 @@ const hamburgerMenuStatus = ref(false)
 
 const updateWidth = () => {
   isMobile.value = window.innerWidth < 1000
-  console.log(isMobile.value)
 }
 
 function toggleHamburgeMenu() {
   hamburgerMenuStatus.value = !hamburgerMenuStatus.value
-  console.log(hamburgerMenuStatus.value)
 }
 
 onMounted(() => {
@@ -35,15 +33,23 @@ onUnmounted(() => {
   <header :class="['container', 'sora']">
     <div :class="['row', 'flex']">
       <nav :class="['header-menu', 'flex']">
-        <a href="/"><span>D</span>ooin</a>
+        <a href="/"><span class="blue">D</span>ooin</a>
         <a :href="menu.href" v-for="menu in menuData" v-if="!isMobile">{{ menu.name }}</a>
       </nav>
-      <Button name="Get Started" v-if="!isMobile"></Button>
+      <Button name="Get started" v-if="!isMobile"></Button>
       <button v-if="isMobile" :class="['hamburger-button']" @click="toggleHamburgeMenu">
         <HamburgerIcon />
       </button>
     </div>
-    <div :class="['row', 'hamburger-menu']" v-if="hamburgerMenuStatus">
+    <div
+      :class="{
+        row: true,
+        'hamburger-menu': true,
+        'show-menu': hamburgerMenuStatus,
+        'hide-menu': !hamburgerMenuStatus,
+      }"
+      v-if="isMobile"
+    >
       <nav :class="['flex']">
         <a :href="menu.href" v-for="menu in menuData" :class="['row']">{{ menu.name }}</a>
       </nav>
@@ -55,7 +61,7 @@ onUnmounted(() => {
 @import './../styles/variables';
 header {
   border-bottom: 1px solid $primary-grey;
-  padding: 30px 0 10px 0;
+  padding: 10px 0 10px 0;
   position: sticky;
   top: 0;
   div {
@@ -78,7 +84,6 @@ header {
         &:hover,
         span {
           transition: 0.2s ease;
-          color: $primary-blue;
         }
       }
     }
@@ -91,6 +96,7 @@ header {
 }
 
 .hamburger-menu {
+  position: relative;
   nav {
     flex-direction: column;
     align-items: center;
@@ -106,9 +112,37 @@ header {
   }
 }
 
+.show-menu {
+  animation: show-menu-animation 0.5s forwards;
+}
+
+.hide-menu {
+  animation: hide-menu-animation 0.5s forwards;
+}
+
+@keyframes show-menu-animation {
+  0% {
+    top: -1000px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+@keyframes hide-menu-animation {
+  0% {
+    top: 0px;
+  }
+  100% {
+    top: -1000px;
+    display: none;
+  }
+}
+
 @media (max-width: 1000px) {
   header {
     padding: 10px 0;
+    border: none;
   }
 }
 </style>
