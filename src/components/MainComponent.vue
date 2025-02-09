@@ -2,6 +2,7 @@
 import BannerComponent from './BannerComponent.vue'
 import FeaturesComponent from './FeaturesComponent.vue'
 import UsageComponent from './UsageComponent.vue'
+import FAQComponent from './FAQComponent.vue'
 </script>
 
 <template>
@@ -9,6 +10,7 @@ import UsageComponent from './UsageComponent.vue'
     <BannerComponent />
     <FeaturesComponent />
     <UsageComponent />
+    <FAQComponent />
   </main>
 </template>
 
