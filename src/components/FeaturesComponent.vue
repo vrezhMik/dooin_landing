@@ -98,6 +98,7 @@ const selectedIndex = ref(0)
 @use './../styles/variables' as variables;
 .features {
   margin-top: 100px;
+  margin-bottom: 100px;
   &-info {
     max-width: 50%;
     margin: 0 auto;
