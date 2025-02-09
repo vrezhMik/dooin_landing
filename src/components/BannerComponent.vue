@@ -24,9 +24,9 @@ import ThemeButton from './ThemeButton.vue'
 <style scoped lang="scss">
 .banner {
   background: hsla(226, 63%, 95%, 1);
-  background: linear-gradient(270deg, hsla(226, 63%, 95%, 1) 0%, hsla(0, 0%, 100%, 1) 100%);
-  background: -moz-linear-gradient(270deg, hsla(226, 63%, 95%, 1) 0%, hsla(0, 0%, 100%, 1) 100%);
-  background: -webkit-linear-gradient(270deg, hsla(226, 63%, 95%, 1) 0%, hsla(0, 0%, 100%, 1) 100%);
+  background: linear-gradient(270deg, hsla(226, 63%, 95%, 1) 0%, #fafafa 100%);
+  background: -moz-linear-gradient(270deg, hsla(226, 63%, 95%, 1) 0%, #fafafa 100%);
+  background: -webkit-linear-gradient(270deg, hsla(226, 63%, 95%, 1) 0%, #fafafa 100%);
   padding: 76px 76px 32px 76px;
   border-radius: 30px;
   &-title {

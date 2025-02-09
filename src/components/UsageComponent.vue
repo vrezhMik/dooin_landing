@@ -64,6 +64,7 @@
 <style lang="scss" scoped>
 @use './../styles/variables' as variables;
 .usage {
+  margin-bottom: 100px;
   &-info {
     max-width: 50%;
     margin: 0 auto;
