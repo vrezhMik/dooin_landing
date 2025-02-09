@@ -58,9 +58,9 @@ onUnmounted(() => {
 </template>
 
 <style scoped lang="scss">
-@import './../styles/variables';
+@use './../styles/variables' as variables;
 header {
-  border-bottom: 1px solid $primary-grey;
+  border-bottom: 1px solid variables.$primary-grey;
   padding: 10px 0 10px 0;
   position: sticky;
   top: 0;
@@ -74,7 +74,7 @@ header {
       column-gap: 30px;
       a {
         font-size: 14px;
-        color: $primary-black;
+        color: variables.$primary-black;
         transition: 0.2s ease;
         font-weight: 400;
         &:first-child {
@@ -102,7 +102,7 @@ header {
     align-items: center;
     a {
       padding: 32px 0px;
-      border-bottom: 1px solid $primary-grey;
+      border-bottom: 1px solid variables.$primary-grey;
       text-align: center;
       text-transform: capitalize;
       &:last-child {

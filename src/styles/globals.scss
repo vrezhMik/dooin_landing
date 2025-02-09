@@ -1,4 +1,4 @@
-@import './variables';
+@use './variables' as variables;
 .flex {
   display: flex;
 }
@@ -14,5 +14,5 @@
 }
 
 .blue {
-  color: $primary-blue;
+  color: variables.$primary-blue;
 }

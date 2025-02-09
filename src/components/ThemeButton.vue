@@ -13,29 +13,29 @@ const props = defineProps(['name'])
 </template>
 
 <style scoped lang="scss">
-@import './../styles/_variables';
+@use './../styles/_variables' as variables;
 
 button {
   align-items: center;
   column-gap: 12px;
   padding: 1rem 2rem;
   font-size: 0.9rem;
-  border: 1px solid $primary-grey;
+  border: 1px solid variables.$primary-grey;
   border-radius: 50px;
-  color: $primary-white;
+  color: variables.$primary-white;
   box-shadow: 1px 1px 2px rgba(16, 24, 40, 0.05);
   background: hsla(230, 86%, 58%, 1);
   background: linear-gradient(0deg, hsla(230, 86%, 58%, 1) 0%, hsla(230, 60%, 18%, 1) 100%);
   background: -moz-linear-gradient(0deg, hsla(230, 86%, 58%, 1) 0%, hsla(230, 60%, 18%, 1) 100%);
   background: -webkit-linear-gradient(0deg, hsla(230, 86%, 58%, 1) 0%, hsla(230, 60%, 18%, 1) 100%);
   &:hover {
-    background: $primary-blue;
-    color: $primary-white;
+    background: variables.$primary-blue;
+    color: variables.$primary-white;
   }
 }
 
 .arrow-border {
-  background-color: $primary-white;
+  background-color: variables.$primary-white;
   padding: 8px;
   border-radius: 50%;
   justify-content: center;
