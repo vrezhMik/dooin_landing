@@ -64,6 +64,7 @@ header {
   padding: 10px 0 10px 0;
   position: sticky;
   top: 0;
+  background-color: variables.$theme-color;
   div {
     justify-content: space-between;
     align-items: center;
