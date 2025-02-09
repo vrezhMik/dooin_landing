@@ -15,7 +15,9 @@ import ThemeButton from './ThemeButton.vue'
       <h3>Are You In?</h3>
       <ThemeButton name="Get started" />
     </div>
-    <div></div>
+    <div class="flex banner-image--container">
+      <img src="./../assets/phone.png" alt="" />
+    </div>
   </div>
 </template>
 
@@ -44,10 +46,14 @@ import ThemeButton from './ThemeButton.vue'
     justify-content: center;
     align-items: center;
     column-gap: 12px;
+    margin-bottom: 40px;
     h3 {
       font-size: 30px;
       font-weight: 400;
     }
+  }
+  &-image--container {
+    justify-content: center;
   }
 }
 </style>
