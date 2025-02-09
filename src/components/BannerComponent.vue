@@ -6,17 +6,14 @@ import ThemeButton from './ThemeButton.vue'
 <template>
   <div class="banner">
     <div class="row">
-      <h1 class="banner-title">Say bye to <span class="blue">chaos.</span></h1>
+      <h1 class="banner-title blue">Find Help or Offer Yours</h1>
     </div>
     <div class="row banner-description">
-      <p>
-        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
-        consequat duis enim velit mollit.
-      </p>
+      <p>Earn Money, Exchange Benefits, or Volunteer – There’s Something for Everyone!</p>
     </div>
     <div class="row flex banner-buttons">
+      <h3>Are You In?</h3>
       <ThemeButton name="Get started" />
-      <ButtonComponent name="Get demo" />
     </div>
     <div></div>
   </div>
@@ -45,7 +42,12 @@ import ThemeButton from './ThemeButton.vue'
   }
   &-buttons {
     justify-content: center;
+    align-items: center;
     column-gap: 12px;
+    h3 {
+      font-size: 30px;
+      font-weight: 400;
+    }
   }
 }
 </style>
