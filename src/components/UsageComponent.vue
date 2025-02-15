@@ -5,7 +5,7 @@ const selectedIndex = ref(0)
 </script>
 
 <template>
-  <div class="usage">
+  <div class="usage container">
     <div class="usage-info">
       <div class="usage-info-title">
         <p>this is how it works</p>

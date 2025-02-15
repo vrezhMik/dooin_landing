@@ -10,7 +10,7 @@ const toggleAnswer = (index) => {
 </script>
 
 <template>
-  <div class="faq">
+  <div class="faq container">
     <div class="faq-info">
       <div class="faq-info--title">
         <h2>Häufig gestellte Fragen</h2>

@@ -4,7 +4,7 @@ import ThemeButton from './ThemeButton.vue'
 </script>
 
 <template>
-  <div class="banner">
+  <div class="banner container">
     <div class="row">
       <h1 class="banner-title blue">Find Help or Offer Yours</h1>
     </div>

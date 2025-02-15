@@ -5,7 +5,7 @@ const selectedIndex = ref(0)
 </script>
 
 <template>
-  <div class="features">
+  <div class="features container">
     <div class="features-info">
       <div class="features-info--title">
         <p>Features</p>
