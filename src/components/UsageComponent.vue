@@ -1,4 +1,8 @@
-<script setup></script>
+<script setup>
+import { ref } from 'vue'
+
+const selectedIndex = ref(0)
+</script>
 
 <template>
   <div class="usage">
@@ -7,54 +11,110 @@
         <p>this is how it works</p>
       </div>
       <div class="usage-info--description">
-        <h2>Add title for this section</h2>
+        <h2>Find Help or Offer Help – for Every Task in Life!</h2>
+      </div>
+      <div class="usage-info--menu flex">
+        <button @click="selectedIndex = 0">Offer a Job</button>
+        <button @click="selectedIndex = 1">Find a Job</button>
       </div>
     </div>
-    <div class="usage-block flex">
-      <div class="usage-block--image">
-        <img src="./../assets/block2.webp" alt="" />
-      </div>
-      <div class="usage-block--content flex">
-        <div class="usage-block--content-title">
-          <h3>Schnelle Reinigung Deiner Wohnung</h3>
+    <div v-if="selectedIndex == 0">
+      <div class="usage-block flex">
+        <div class="usage-block--image">
+          <img src="./../assets/block2.webp" alt="" />
         </div>
-        <div class="usage-block--content-description">
-          <p>
-            No time to clean your apartment? Post the task and quickly find someone who can help you
-            clean – whether it’s a quick sweep or a thorough cleaning.
-          </p>
+        <div class="usage-block--content flex">
+          <div class="usage-block--content-title">
+            <h3>Schnelle Reinigung Deiner Wohnung</h3>
+          </div>
+          <div class="usage-block--content-description">
+            <p>
+              No time to clean your apartment? Post the task and quickly find someone who can help
+              you clean – whether it’s a quick sweep or a thorough cleaning.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="usage-block flex image-left">
+        <div class="usage-block--image">
+          <img src="./../assets/block2.webp" alt="" />
+        </div>
+        <div class="usage-block--content flex">
+          <div class="usage-block--content-title">
+            <h3>Einkäufe Erledigen lassen</h3>
+          </div>
+          <div class="usage-block--content-description">
+            <p>
+              UNeed groceries or other items urgently but don’t have time? Have a tasker do your
+              shopping and bring the goods directly to your door."
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="usage-block flex">
+        <div class="usage-block--image">
+          <img src="./../assets/block2.webp" alt="" />
+        </div>
+        <div class="usage-block--content flex">
+          <div class="usage-block--content-title">
+            <h3>Freiwillige Hilfe für die Nachbarschaft</h3>
+          </div>
+          <div class="usage-block--content-description">
+            <p>
+              Organize volunteer help for neighbors – such as cleaning out, shopping for seniors, or
+              supporting refugee initiatives."
+            </p>
+          </div>
         </div>
       </div>
     </div>
-    <div class="usage-block flex image-left">
-      <div class="usage-block--image">
-        <img src="./../assets/block2.webp" alt="" />
-      </div>
-      <div class="usage-block--content flex">
-        <div class="usage-block--content-title">
-          <h3>Einkäufe Erledigen lassen</h3>
+    <div v-if="selectedIndex == 1">
+      <div class="usage-block flex">
+        <div class="usage-block--image">
+          <img src="./../assets/block2.webp" alt="" />
         </div>
-        <div class="usage-block--content-description">
-          <p>
-            UNeed groceries or other items urgently but don’t have time? Have a tasker do your
-            shopping and bring the goods directly to your door."
-          </p>
+        <div class="usage-block--content flex">
+          <div class="usage-block--content-title">
+            <h3>Do Shopping for Others</h3>
+          </div>
+          <div class="usage-block--content-description">
+            <p>
+              Have time and enjoy shopping? Help your neighbors with their shopping and earn some
+              money.
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="usage-block flex">
-      <div class="usage-block--image">
-        <img src="./../assets/block2.webp" alt="" />
-      </div>
-      <div class="usage-block--content flex">
-        <div class="usage-block--content-title">
-          <h3>Freiwillige Hilfe für die Nachbarschaft</h3>
+      <div class="usage-block flex image-left">
+        <div class="usage-block--image">
+          <img src="./../assets/block2.webp" alt="" />
         </div>
-        <div class="usage-block--content-description">
-          <p>
-            Organize volunteer help for neighbors – such as cleaning out, shopping for seniors, or
-            supporting refugee initiatives."
-          </p>
+        <div class="usage-block--content flex">
+          <div class="usage-block--content-title">
+            <h3>Tech Support for Seniors</h3>
+          </div>
+          <div class="usage-block--content-description">
+            <p>
+              Assist elderly people with their smartphones or setting up devices. Easy and direct
+              through the app.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="usage-block flex">
+        <div class="usage-block--image">
+          <img src="./../assets/block2.webp" alt="" />
+        </div>
+        <div class="usage-block--content flex">
+          <div class="usage-block--content-title">
+            <h3>Help with Moving</h3>
+          </div>
+          <div class="usage-block--content-description">
+            <p>
+              Offer your help with moving – whether it’s carrying, packing, or transporting. The app
+              connects you directly with people who need your assistance.
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -121,6 +181,7 @@
         height: 100%;
         border-radius: 30px;
         width: 100%;
+        min-width: 500px;
       }
     }
     &--content {

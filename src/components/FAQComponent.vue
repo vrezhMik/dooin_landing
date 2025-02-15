@@ -43,6 +43,34 @@ const toggleAnswer = (index) => {
         <p>Dooin is free! You only pay for the help you get or give.</p>
       </div>
     </div>
+    <div class="faq-block">
+      <div class="row faq-block--question flex">
+        <div class="faq-block--question-title">Is Dooin Safe?</div>
+        <div class="faq-block--question-button">
+          <button @click="toggleAnswer(3)"><PlusIcon /></button>
+        </div>
+      </div>
+      <div class="row faq-block--answer" :class="{ open: openIndexes[3] }">
+        <p>
+          Yes! All profiles on Dooin are verified, and you can see real reviews from other users.
+          This way, you can safely find the right person for your task.
+        </p>
+      </div>
+    </div>
+    <div class="faq-block">
+      <div class="row faq-block--question flex">
+        <div class="faq-block--question-title">How Do I Pay for a Completed Task?</div>
+        <div class="faq-block--question-button">
+          <button @click="toggleAnswer(4)"><PlusIcon /></button>
+        </div>
+      </div>
+      <div class="row faq-block--answer" :class="{ open: openIndexes[4] }">
+        <p>
+          Payment is made directly between the task giver and the helper – you decide how to handle
+          it. Dooin takes no commission or fees.
+        </p>
+      </div>
+    </div>
   </div>
 </template>
 

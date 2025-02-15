@@ -14,11 +14,11 @@ const selectedIndex = ref(0)
         <h2>What Makes Dooin Special</h2>
       </div>
       <div class="features-info--menu flex">
-        <button @click="selectedIndex = 0">button1</button>
-        <button @click="selectedIndex = 1">button2</button>
-        <button @click="selectedIndex = 2">button3</button>
-        <button @click="selectedIndex = 3">button4</button>
-        <button @click="selectedIndex = 4">button5</button>
+        <button @click="selectedIndex = 0">Direct</button>
+        <button @click="selectedIndex = 1">Trusted</button>
+        <button @click="selectedIndex = 2">Nearby</button>
+        <button @click="selectedIndex = 3">Fast</button>
+        <button @click="selectedIndex = 4">Free</button>
       </div>
     </div>
 
