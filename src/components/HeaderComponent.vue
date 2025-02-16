@@ -4,7 +4,6 @@ import HamburgerIcon from './Icons/HamburgerIcon.vue'
 import { ref, onMounted, onUnmounted } from 'vue'
 
 const menuData = [
-  { href: '/', name: 'home' },
   { href: '#product', name: 'product' },
   { href: '#about', name: 'about' },
 ]

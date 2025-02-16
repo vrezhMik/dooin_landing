@@ -4,6 +4,7 @@ import FeaturesComponent from './FeaturesComponent.vue'
 import UsageComponent from './UsageComponent.vue'
 import FAQComponent from './FAQComponent.vue'
 import InstallationComponent from './InstallationComponent.vue'
+import FooterComponent from './FooterComponent.vue'
 </script>
 
 <template>
@@ -13,6 +14,7 @@ import InstallationComponent from './InstallationComponent.vue'
     <UsageComponent />
     <FAQComponent />
     <InstallationComponent />
+    <FooterComponent />
   </main>
 </template>
 

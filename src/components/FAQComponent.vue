@@ -78,7 +78,7 @@ const toggleAnswer = (index) => {
 @use './../styles/variables' as variables;
 
 .faq {
-  background-image: linear-gradient(180deg, rgba(54, 97, 246, 0.1), #f3f7fb);
+  background-image: linear-gradient(180deg, rgba(54, 97, 246, 0.1), #fafafa);
   padding: 4.8rem;
   border-radius: 30px;
 
