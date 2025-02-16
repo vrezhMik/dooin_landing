@@ -5,18 +5,16 @@ import UsageComponent from './UsageComponent.vue'
 import AboutComponent from './AboutComponent.vue'
 import FAQComponent from './FAQComponent.vue'
 import InstallationComponent from './InstallationComponent.vue'
-import FooterComponent from './FooterComponent.vue'
 </script>
 
 <template>
-  <main class="sora">
+  <main class="sora" id="home">
     <BannerComponent />
     <FeaturesComponent />
     <AboutComponent />
     <UsageComponent />
     <FAQComponent />
     <InstallationComponent />
-    <FooterComponent />
   </main>
 </template>
 

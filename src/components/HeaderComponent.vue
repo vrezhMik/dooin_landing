@@ -2,6 +2,7 @@
 import Button from './ButtonComponent.vue'
 import HamburgerIcon from './Icons/HamburgerIcon.vue'
 import { ref, onMounted, onUnmounted } from 'vue'
+import VueScrollTo from 'vue-scrollto'
 
 const menuData = [
   { href: '#product', name: 'product' },
@@ -15,8 +16,20 @@ const updateWidth = () => {
   isMobile.value = window.innerWidth < 1000
 }
 
-function toggleHamburgeMenu() {
+const toggleHamburgeMenu = () => {
   hamburgerMenuStatus.value = !hamburgerMenuStatus.value
+}
+
+// Function to handle smooth scrolling
+const scrollToSection = (target) => {
+  setTimeout(() => {
+    const element = document.querySelector(target)
+    if (element) {
+      VueScrollTo.scrollTo(target, 1000, { easing: 'ease-in-out', offset: -80 })
+    } else {
+      console.warn(`Element ${target} not found on the page.`)
+    }
+  }, 100)
 }
 
 onMounted(() => {
@@ -32,8 +45,16 @@ onUnmounted(() => {
   <header :class="['sora']">
     <div :class="['row', 'flex']">
       <nav :class="['header-menu', 'flex']">
-        <a href="/"><span class="blue">D</span>ooin</a>
-        <a :href="menu.href" v-for="menu in menuData" v-if="!isMobile">{{ menu.name }}</a>
+        <a href="#" @click.prevent="scrollToSection('#home')"><span class="blue">D</span>ooin</a>
+        <a
+          v-for="menu in menuData"
+          :key="menu.name"
+          href="#"
+          @click.prevent="scrollToSection(menu.href)"
+          v-if="!isMobile"
+        >
+          {{ menu.name }}
+        </a>
       </nav>
       <Button name="Get started" v-if="!isMobile"></Button>
       <button v-if="isMobile" :class="['hamburger-button']" @click="toggleHamburgeMenu">
@@ -50,7 +71,15 @@ onUnmounted(() => {
       v-if="isMobile"
     >
       <nav :class="['flex']">
-        <a :href="menu.href" v-for="menu in menuData" :class="['row']">{{ menu.name }}</a>
+        <a
+          v-for="menu in menuData"
+          :key="menu.name"
+          href="#"
+          @click.prevent="scrollToSection(menu.href)"
+          :class="['row']"
+        >
+          {{ menu.name }}
+        </a>
       </nav>
     </div>
   </header>

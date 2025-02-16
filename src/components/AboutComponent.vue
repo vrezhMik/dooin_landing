@@ -1,6 +1,6 @@
 <script></script>
 <template>
-  <div class="about">
+  <div class="about" id="about">
     <div class="about-info">
       <div class="about-info--description">
         <h2>Gemeinsam mehr erreichen – die Idee hinter Dooin</h2>
