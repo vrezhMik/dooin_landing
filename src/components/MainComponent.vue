@@ -22,4 +22,10 @@ import FooterComponent from './FooterComponent.vue'
 main {
   margin-top: 50px;
 }
+
+@media (max-width: 470px) {
+  main {
+    margin-top: 10px;
+  }
+}
 </style>

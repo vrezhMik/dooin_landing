@@ -205,4 +205,57 @@ const selectedIndex = ref(0)
 .image-left {
   flex-direction: row-reverse;
 }
+
+@media (max-width: 940px) {
+  .usage {
+    &-block {
+      &--image {
+        max-width: 300px;
+        img {
+          min-width: 300px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 740px) {
+  .usage {
+    &-info {
+      &--menu {
+        margin-bottom: 30px;
+      }
+    }
+    &-block {
+      flex-direction: column;
+      align-items: center;
+      &--image {
+        max-width: 250px;
+        img {
+          min-width: 250px;
+        }
+      }
+      &--content {
+        width: 70%;
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 470px) {
+  .usage {
+    &-info {
+      max-width: 80%;
+      &--description {
+        h2 {
+          font-size: 1.8rem;
+        }
+      }
+      &--menu {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
 </style>

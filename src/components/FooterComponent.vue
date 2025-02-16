@@ -104,4 +104,37 @@ footer {
     }
   }
 }
+
+@media (max-width: 470px) {
+  footer {
+    .footer-content {
+      &--info {
+        flex-direction: column;
+        &-company {
+          p {
+            margin-bottom: 15px;
+          }
+        }
+        &-links {
+          flex-direction: column;
+          row-gap: 5px;
+        }
+      }
+    }
+  }
+
+  .menu-column {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    h2 {
+      margin: 0;
+      font-size: 1rem;
+    }
+    nav {
+      flex-direction: row;
+      column-gap: 10px;
+    }
+  }
+}
 </style>

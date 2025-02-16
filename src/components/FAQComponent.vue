@@ -158,4 +158,30 @@ const toggleAnswer = (index) => {
     }
   }
 }
+
+@media (max-width: 470px) {
+  .faq {
+    padding: 2rem;
+    &-info {
+      max-width: 80%;
+      &--title {
+        h2 {
+          font-size: 1.8rem;
+        }
+      }
+    }
+
+    &-block {
+      &--question {
+        &-title {
+          width: 80%;
+          font-size: 1rem;
+        }
+      }
+      &--answer {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
 </style>

@@ -29,7 +29,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <header :class="['container', 'sora']">
+  <header :class="['sora']">
     <div :class="['row', 'flex']">
       <nav :class="['header-menu', 'flex']">
         <a href="/"><span class="blue">D</span>ooin</a>
@@ -60,14 +60,15 @@ onUnmounted(() => {
 @use './../styles/variables' as variables;
 header {
   border-bottom: 1px solid variables.$primary-grey;
+
   padding: 10px 0 10px 0;
   position: sticky;
   top: 0;
   background-color: variables.$theme-color;
   div {
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-
+    column-gap: 30%;
     .header-menu {
       align-items: center;
       width: 30%;

@@ -56,4 +56,19 @@ import ThemeButton from './ThemeButton.vue'
     justify-content: center;
   }
 }
+
+@media (max-width: 470px) {
+  .banner {
+    &-title {
+      font-size: 2.3rem;
+    }
+    &-description {
+      font-size: 1rem;
+    }
+    &-buttons {
+      flex-direction: column;
+      row-gap: 30px;
+    }
+  }
+}
 </style>

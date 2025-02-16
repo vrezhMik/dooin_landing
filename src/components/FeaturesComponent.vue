@@ -175,4 +175,37 @@ const selectedIndex = ref(0)
     }
   }
 }
+
+@media (max-width: 470px) {
+  .features {
+    &-info {
+      &--description {
+        h2 {
+          font-size: 1.8rem;
+        }
+      }
+    }
+    &-block {
+      height: 250px;
+      align-items: center;
+      &--image {
+        width: 50%;
+        img {
+          object-fit: cover;
+        }
+      }
+      &--content {
+        width: 40%;
+        &-title {
+          h3 {
+            font-size: 1.25rem;
+          }
+        }
+        &-description {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}
 </style>

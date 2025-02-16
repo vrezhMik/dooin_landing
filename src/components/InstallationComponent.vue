@@ -56,7 +56,7 @@
     justify-content: space-evenly;
     &--block {
       height: 400px;
-      width: 400px;
+      width: 30%;
       border-radius: 30px;
       background-color: variables.$text-invert;
       display: flex;
@@ -71,6 +71,102 @@
       h2 {
         font-size: 2.2rem;
         width: 70%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .installation {
+    &-steps {
+      &--block {
+        span {
+          font-size: 9rem;
+        }
+        h2 {
+          font-size: 1.9rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .installation {
+    &-steps {
+      &--block {
+        height: 350px;
+        span {
+          font-size: 8rem;
+        }
+        h2 {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .installation {
+    &-steps {
+      flex-direction: column;
+      row-gap: 30px;
+      &--block {
+        width: 50%;
+      }
+    }
+  }
+}
+
+@media (max-width: 740px) {
+  .installation {
+    &-info {
+      &--description {
+        h2 {
+          font-weight: 500;
+          font-size: 3rem;
+        }
+      }
+    }
+    &-steps {
+      &--block {
+        span {
+          font-size: 5rem;
+        }
+        h2 {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 490px) {
+  .installation {
+    padding-bottom: 20px;
+    &-info {
+      max-width: 80%;
+      &--description {
+        width: 100%;
+        text-align: center;
+
+        h2 {
+          font-weight: 500;
+          font-size: 1.8rem;
+        }
+      }
+    }
+    &-steps {
+      &--block {
+        width: 80%;
+        height: 250px;
+        span {
+          font-size: 5rem;
+        }
+        h2 {
+          font-size: 1.2rem;
+        }
       }
     }
   }
