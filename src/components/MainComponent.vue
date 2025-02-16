@@ -2,6 +2,7 @@
 import BannerComponent from './BannerComponent.vue'
 import FeaturesComponent from './FeaturesComponent.vue'
 import UsageComponent from './UsageComponent.vue'
+import AboutComponent from './AboutComponent.vue'
 import FAQComponent from './FAQComponent.vue'
 import InstallationComponent from './InstallationComponent.vue'
 import FooterComponent from './FooterComponent.vue'
@@ -11,6 +12,7 @@ import FooterComponent from './FooterComponent.vue'
   <main class="sora">
     <BannerComponent />
     <FeaturesComponent />
+    <AboutComponent />
     <UsageComponent />
     <FAQComponent />
     <InstallationComponent />

@@ -79,7 +79,7 @@ header {
         transition: 0.2s ease;
         font-weight: 400;
         &:first-child {
-          font-size: 16px;
+          font-size: 1.6rem;
           font-weight: 600;
         }
         &:hover,
