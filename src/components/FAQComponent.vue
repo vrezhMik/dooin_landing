@@ -82,7 +82,7 @@ const toggleAnswer = (index) => {
   padding: 4.8rem;
   color: variables.$theme-color-dark;
   border-radius: 30px;
-
+  margin-bottom: 50px;
   &-info {
     max-width: 50%;
     margin: 0 auto;
