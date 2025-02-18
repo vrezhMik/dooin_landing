@@ -66,7 +66,7 @@
       column-gap: 30px;
       span {
         font-size: 10rem;
-        color: variables.$primary-blue;
+        color: variables.$primary-color;
       }
       h2 {
         font-size: 2.2rem;

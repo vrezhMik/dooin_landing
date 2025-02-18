@@ -6,7 +6,7 @@ import ThemeButton from './ThemeButton.vue'
 <template>
   <div class="banner container">
     <div class="row">
-      <h1 class="banner-title blue">Find Help or Offer Yours</h1>
+      <h1 class="banner-title green">Find Help or Offer Yours</h1>
     </div>
     <div class="row banner-description">
       <p>Earn Money, Exchange Benefits, or Volunteer – There’s Something for Everyone!</p>

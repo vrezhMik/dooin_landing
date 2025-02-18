@@ -6,11 +6,11 @@ const menuData = [
 </script>
 
 <template>
-  <footer>
+  <footer class="sora">
     <div class="footer-content container">
       <div class="row footer-content--info flex">
         <div class="footer-content--info-company flex">
-          <a href="/"><span class="blue">D</span>ooin</a>
+          <a href="/"><span class="green">D</span>ooin</a>
           <p>Everything is secure, direct, and fair. Pay through the platform or get paid.</p>
         </div>
         <div class="footer-content--info-links flex">
@@ -78,7 +78,7 @@ footer {
           font-size: 0.9rem;
           color: #fff;
           &:hover {
-            color: variables.$primary-blue;
+            color: variables.$primary-color;
           }
         }
       }
@@ -99,7 +99,7 @@ footer {
       color: #fff;
       font-size: 0.9rem;
       &:hover {
-        color: variables.$primary-blue;
+        color: variables.$primary-color;
       }
     }
   }

@@ -8,10 +8,10 @@ const selectedIndex = ref(0)
   <div class="usage container">
     <div class="usage-info">
       <div class="usage-info-title">
-        <p>this is how it works</p>
+        <p></p>
       </div>
       <div class="usage-info--description">
-        <h2>Find Help or Offer Help – for Every Task in Life!</h2>
+        <h2>Find or Offer Help – for Any Everyday Task</h2>
       </div>
       <div class="usage-info--menu flex">
         <button @click="selectedIndex = 0">Offer a Job</button>
@@ -151,19 +151,19 @@ const selectedIndex = ref(0)
       align-items: center;
       margin-bottom: 64px;
       button {
-        font-size: 0.875rem;
-        color: variables.$text-secondary;
+        width: 30%;
+        font-size: 1rem;
+        color: variables.$text-invert;
         border: 1px solid transparent;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-        padding-top: 0.563rem;
-        padding-bottom: 0.563rem;
-        background-color: variables.$text-invert;
+        padding: 1rem 0.5rem;
+        background-color: variables.$primary-color;
         border-radius: 15px;
         text-transform: capitalize;
+        font-weight: 900;
+        transition: 0.4s ease;
+
         &:hover {
-          border: 1px solid variables.$primary-blue;
-          color: variables.$primary-blue;
+          color: variables.$subcolor-light;
         }
       }
     }
@@ -174,6 +174,8 @@ const selectedIndex = ref(0)
     column-gap: 2.4rem;
     border-radius: 30px;
     overflow: hidden;
+    color: variables.$text-secondary;
+
     &--image {
       max-width: 480px;
       height: 100%;

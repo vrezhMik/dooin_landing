@@ -8,7 +8,7 @@ const selectedIndex = ref(0)
   <div class="features container" id="product">
     <div class="features-info">
       <div class="features-info--title">
-        <p>Features</p>
+        <p></p>
       </div>
       <div class="features-info--description">
         <h2>What Makes Dooin Special</h2>
@@ -104,6 +104,7 @@ const selectedIndex = ref(0)
     margin: 0 auto;
     text-align: center;
     color: variables.$text-secondary;
+
     &--title {
       p {
         text-transform: uppercase;
@@ -125,19 +126,19 @@ const selectedIndex = ref(0)
       align-items: center;
       margin-bottom: 64px;
       button {
-        font-size: 0.875rem;
-        color: variables.$text-secondary;
+        min-width: 100px;
+        width: 100%;
+        font-size: 1rem;
+        color: variables.$text-invert;
         border: 1px solid transparent;
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-        padding-top: 0.563rem;
-        padding-bottom: 0.563rem;
-        background-color: variables.$text-invert;
+        padding: 1rem;
+        background-color: variables.$primary-color;
         border-radius: 15px;
         text-transform: capitalize;
+        font-weight: 900;
+        transition: 0.4s ease;
         &:hover {
-          border: 1px solid variables.$primary-blue;
-          color: variables.$primary-blue;
+          color: variables.$subcolor-light;
         }
       }
     }
@@ -162,6 +163,7 @@ const selectedIndex = ref(0)
       flex-direction: column;
       justify-content: center;
       row-gap: 0.8rem;
+      color: variables.$text-secondary;
       &-title {
         h3 {
           font-size: 2.25rem;

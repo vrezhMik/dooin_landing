@@ -80,6 +80,7 @@ const toggleAnswer = (index) => {
 .faq {
   background-image: linear-gradient(180deg, rgba(54, 97, 246, 0.1), #fafafa);
   padding: 4.8rem;
+  color: variables.$theme-color-dark;
   border-radius: 30px;
 
   &-info {
@@ -89,6 +90,8 @@ const toggleAnswer = (index) => {
     color: variables.$text-secondary;
 
     &--title {
+      color: variables.$theme-color-dark;
+
       h2 {
         font-weight: 500;
         font-size: 2.25rem;

@@ -24,13 +24,16 @@ button {
   border-radius: 50px;
   color: variables.$primary-white;
   box-shadow: 1px 1px 2px rgba(16, 24, 40, 0.05);
-  background: hsla(230, 86%, 58%, 1);
-  background: linear-gradient(0deg, hsla(230, 86%, 58%, 1) 0%, hsla(230, 60%, 18%, 1) 100%);
-  background: -moz-linear-gradient(0deg, hsla(230, 86%, 58%, 1) 0%, hsla(230, 60%, 18%, 1) 100%);
-  background: -webkit-linear-gradient(0deg, hsla(230, 86%, 58%, 1) 0%, hsla(230, 60%, 18%, 1) 100%);
+  background: variables.$primary-color;
+  background: linear-gradient(0deg, variables.$primary-color 0%, hsla(230, 60%, 18%, 1) 100%);
+  background: -moz-linear-gradient(0deg, variables.$primary-color 0%, hsla(230, 60%, 18%, 1) 100%);
+  background: -webkit-linear-gradient(
+    0deg,
+    variables.$primary-color 0%,
+    hsla(230, 60%, 18%, 1) 100%
+  );
   &:hover {
-    background: variables.$primary-blue;
-    color: variables.$primary-white;
+    background: variables.$primary-color;
   }
 }
 

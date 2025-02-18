@@ -45,7 +45,7 @@ onUnmounted(() => {
   <header :class="['sora']">
     <div :class="['row', 'flex']">
       <nav :class="['header-menu', 'flex']">
-        <a href="#" @click.prevent="scrollToSection('#home')"><span class="blue">D</span>ooin</a>
+        <a href="#" @click.prevent="scrollToSection('#home')"><span class="green">D</span>ooin</a>
         <a
           v-for="menu in menuData"
           :key="menu.name"
