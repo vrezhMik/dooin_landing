@@ -1,4 +1,4 @@
-<script setup>
+<script lang="ts" setup>
 import { ref } from 'vue'
 
 const selectedIndex = ref(0)
@@ -14,11 +14,11 @@ const selectedIndex = ref(0)
         <h2>What Makes Dooin Special</h2>
       </div>
       <div class="features-info--menu flex">
-        <button @click="selectedIndex = 0">Direct</button>
-        <button @click="selectedIndex = 1">Trusted</button>
-        <button @click="selectedIndex = 2">Nearby</button>
-        <button @click="selectedIndex = 3">Fast</button>
-        <button @click="selectedIndex = 4">Free</button>
+        <button @click="selectedIndex = 0" :class="{ active: selectedIndex === 0 }">Direct</button>
+        <button @click="selectedIndex = 1" :class="{ active: selectedIndex === 1 }">Trusted</button>
+        <button @click="selectedIndex = 2" :class="{ active: selectedIndex === 2 }">Nearby</button>
+        <button @click="selectedIndex = 3" :class="{ active: selectedIndex === 3 }">Fast</button>
+        <button @click="selectedIndex = 4" :class="{ active: selectedIndex === 4 }">Free</button>
       </div>
     </div>
 
@@ -99,6 +99,9 @@ const selectedIndex = ref(0)
 .features {
   margin-top: 100px;
   margin-bottom: 100px;
+  background-color: variables.$text-invert;
+  border-radius: 30px;
+  padding: 32px;
   &-info {
     max-width: 50%;
     margin: 0 auto;
@@ -136,7 +139,6 @@ const selectedIndex = ref(0)
         border-radius: 15px;
         text-transform: capitalize;
         font-weight: 900;
-        transition: 0.4s ease;
         &:hover {
           color: variables.$subcolor-light;
         }
@@ -144,12 +146,9 @@ const selectedIndex = ref(0)
     }
   }
   &-block {
-    background-color: variables.$text-invert;
     max-height: 550px;
-    padding: 32px;
     column-gap: 2.4rem;
-    border-radius: 30px;
-    overflow: hidden;
+    // overflow: hidden;
     &--image {
       max-width: 480px;
       height: 100%;
@@ -181,17 +180,27 @@ const selectedIndex = ref(0)
 @media (max-width: 470px) {
   .features {
     &-info {
+      max-width: 90%;
       &--description {
         h2 {
           font-size: 1.8rem;
+        }
+      }
+      &--menu {
+        flex-wrap: wrap;
+        row-gap: 20px;
+        button {
+          width: 30%;
         }
       }
     }
     &-block {
       height: 250px;
       align-items: center;
+      column-gap: 1rem;
       &--image {
         width: 50%;
+        height: 50%;
         img {
           object-fit: cover;
         }
@@ -209,5 +218,9 @@ const selectedIndex = ref(0)
       }
     }
   }
+}
+
+.active {
+  color: variables.$subcolor-light !important;
 }
 </style>
