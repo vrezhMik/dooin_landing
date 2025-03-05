@@ -21,7 +21,7 @@ const toggleHamburgeMenu = () => {
 }
 
 // Function to handle smooth scrolling
-const scrollToSection = (target) => {
+const scrollToSection = (target: string) => {
   setTimeout(() => {
     const element = document.querySelector(target)
     if (element) {

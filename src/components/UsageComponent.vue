@@ -1,4 +1,4 @@
-<script lang="ts" setup>
+<script setup>
 import { ref } from 'vue'
 import { Splide, SplideSlide } from '@splidejs/vue-splide'
 
