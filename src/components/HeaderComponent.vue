@@ -89,7 +89,7 @@ onUnmounted(() => {
 @use './../styles/variables' as variables;
 header {
   border-bottom: 1px solid variables.$primary-grey;
-
+  z-index: 9999;
   padding: 10px 0 10px 0;
   position: sticky;
   top: 0;

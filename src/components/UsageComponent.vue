@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
+import { Splide, SplideSlide } from '@splidejs/vue-splide'
 
 const selectedIndex = ref(0)
 </script>
@@ -22,111 +23,148 @@ const selectedIndex = ref(0)
         </button>
       </div>
     </div>
-    <div v-if="selectedIndex == 0">
-      <div class="usage-block flex">
-        <div class="usage-block--image">
-          <img src="./../assets/block2.webp" alt="" />
-        </div>
-        <div class="usage-block--content flex">
-          <div class="usage-block--content-title">
-            <h3>Schnelle Reinigung Deiner Wohnung</h3>
-          </div>
-          <div class="usage-block--content-description">
-            <p>
-              No time to clean your apartment? Post the task and quickly find someone who can help
-              you clean – whether it’s a quick sweep or a thorough cleaning.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="usage-block flex image-left">
-        <div class="usage-block--image">
-          <img src="./../assets/block2.webp" alt="" />
-        </div>
-        <div class="usage-block--content flex">
-          <div class="usage-block--content-title">
-            <h3>Einkäufe Erledigen lassen</h3>
-          </div>
-          <div class="usage-block--content-description">
-            <p>
-              UNeed groceries or other items urgently but don’t have time? Have a tasker do your
-              shopping and bring the goods directly to your door."
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="usage-block flex">
-        <div class="usage-block--image">
-          <img src="./../assets/block2.webp" alt="" />
-        </div>
-        <div class="usage-block--content flex">
-          <div class="usage-block--content-title">
-            <h3>Freiwillige Hilfe für die Nachbarschaft</h3>
-          </div>
-          <div class="usage-block--content-description">
-            <p>
-              Organize volunteer help for neighbors – such as cleaning out, shopping for seniors, or
-              supporting refugee initiatives."
-            </p>
-          </div>
-        </div>
-      </div>
+    <div v-if="selectedIndex == 0" class="">
+      <Splide
+        :options="{
+          type: 'loop',
+          perPage: 1,
+          gap: '1rem',
+          autoplay: true,
+          arrows: false,
+          speed: 500,
+          interval: 1500,
+        }"
+      >
+        <SplideSlide>
+          <div class="usage-block flex">
+            <div class="usage-block--image">
+              <img src="./../assets/block2.webp" alt="" />
+            </div>
+            <div class="usage-block--content flex">
+              <div class="usage-block--content-title">
+                <h3>Schnelle Reinigung Deiner Wohnung</h3>
+              </div>
+              <div class="usage-block--content-description">
+                <p>
+                  No time to clean your apartment? Post the task and quickly find someone who can
+                  help you clean – whether it’s a quick sweep or a thorough cleaning.
+                </p>
+              </div>
+            </div>
+          </div></SplideSlide
+        >
+        <SplideSlide
+          ><div class="usage-block flex image-left">
+            <div class="usage-block--image">
+              <img src="./../assets/block2.webp" alt="" />
+            </div>
+            <div class="usage-block--content flex">
+              <div class="usage-block--content-title">
+                <h3>Einkäufe Erledigen lassen</h3>
+              </div>
+              <div class="usage-block--content-description">
+                <p>
+                  UNeed groceries or other items urgently but don’t have time? Have a tasker do your
+                  shopping and bring the goods directly to your door."
+                </p>
+              </div>
+            </div>
+          </div></SplideSlide
+        >
+        <SplideSlide
+          ><div class="usage-block flex">
+            <div class="usage-block--image">
+              <img src="./../assets/block2.webp" alt="" />
+            </div>
+            <div class="usage-block--content flex">
+              <div class="usage-block--content-title">
+                <h3>Freiwillige Hilfe für die Nachbarschaft</h3>
+              </div>
+              <div class="usage-block--content-description">
+                <p>
+                  Organize volunteer help for neighbors – such as cleaning out, shopping for
+                  seniors, or supporting refugee initiatives."
+                </p>
+              </div>
+            </div>
+          </div></SplideSlide
+        >
+      </Splide>
     </div>
     <div v-if="selectedIndex == 1">
-      <div class="usage-block flex">
-        <div class="usage-block--image">
-          <img src="./../assets/block2.webp" alt="" />
-        </div>
-        <div class="usage-block--content flex">
-          <div class="usage-block--content-title">
-            <h3>Do Shopping for Others</h3>
+      <Splide
+        :options="{
+          type: 'loop',
+          perPage: 1,
+          gap: '1rem',
+          autoplay: true,
+          arrows: false,
+          speed: 500,
+          interval: 1500,
+        }"
+      >
+        <SplideSlide
+          ><div class="usage-block flex">
+            <div class="usage-block--image">
+              <img src="./../assets/block2.webp" alt="" />
+            </div>
+            <div class="usage-block--content flex">
+              <div class="usage-block--content-title">
+                <h3>Do Shopping for Others</h3>
+              </div>
+              <div class="usage-block--content-description">
+                <p>
+                  Have time and enjoy shopping? Help your neighbors with their shopping and earn
+                  some money.
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="usage-block--content-description">
-            <p>
-              Have time and enjoy shopping? Help your neighbors with their shopping and earn some
-              money.
-            </p>
+        </SplideSlide>
+        <SplideSlide
+          ><div class="usage-block flex image-left">
+            <div class="usage-block--image">
+              <img src="./../assets/block2.webp" alt="" />
+            </div>
+            <div class="usage-block--content flex">
+              <div class="usage-block--content-title">
+                <h3>Tech Support for Seniors</h3>
+              </div>
+              <div class="usage-block--content-description">
+                <p>
+                  Assist elderly people with their smartphones or setting up devices. Easy and
+                  direct through the app.
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="usage-block flex image-left">
-        <div class="usage-block--image">
-          <img src="./../assets/block2.webp" alt="" />
-        </div>
-        <div class="usage-block--content flex">
-          <div class="usage-block--content-title">
-            <h3>Tech Support for Seniors</h3>
+        </SplideSlide>
+        <SplideSlide
+          ><div class="usage-block flex">
+            <div class="usage-block--image">
+              <img src="./../assets/block2.webp" alt="" />
+            </div>
+            <div class="usage-block--content flex">
+              <div class="usage-block--content-title">
+                <h3>Help with Moving</h3>
+              </div>
+              <div class="usage-block--content-description">
+                <p>
+                  Offer your help with moving – whether it’s carrying, packing, or transporting. The
+                  app connects you directly with people who need your assistance.
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="usage-block--content-description">
-            <p>
-              Assist elderly people with their smartphones or setting up devices. Easy and direct
-              through the app.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="usage-block flex">
-        <div class="usage-block--image">
-          <img src="./../assets/block2.webp" alt="" />
-        </div>
-        <div class="usage-block--content flex">
-          <div class="usage-block--content-title">
-            <h3>Help with Moving</h3>
-          </div>
-          <div class="usage-block--content-description">
-            <p>
-              Offer your help with moving – whether it’s carrying, packing, or transporting. The app
-              connects you directly with people who need your assistance.
-            </p>
-          </div>
-        </div>
-      </div>
+        </SplideSlide>
+      </Splide>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
 @use './../styles/variables' as variables;
+@import '@splidejs/splide/dist/css/splide.min.css';
 .usage {
   margin-bottom: 100px;
   border: 1px solid #e3e3e3;
@@ -175,6 +213,7 @@ const selectedIndex = ref(0)
       }
     }
   }
+
   &-block {
     max-height: 550px;
     padding: 32px;

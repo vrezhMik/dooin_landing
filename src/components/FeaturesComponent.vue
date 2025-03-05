@@ -23,9 +23,9 @@ const selectedIndex = ref(0)
     </div>
 
     <div class="features-block flex" v-if="selectedIndex === 0">
-      <div class="features-block--image">
+      <!-- <div class="features-block--image">
         <img src="./../assets/block.webp" alt="" />
-      </div>
+      </div> -->
       <div class="features-block--content flex">
         <div class="features-block--content-title">
           <h3>Peer-to-Peer Connections</h3>
@@ -37,9 +37,9 @@ const selectedIndex = ref(0)
     </div>
 
     <div class="features-block flex" v-if="selectedIndex === 1">
-      <div class="features-block--image">
+      <!-- <div class="features-block--image">
         <img src="./../assets/block.webp" alt="" />
-      </div>
+      </div> -->
       <div class="features-block--content flex">
         <div class="features-block--content-title">
           <h3>Real Reviews, More Trust</h3>
@@ -51,9 +51,9 @@ const selectedIndex = ref(0)
     </div>
 
     <div class="features-block flex" v-if="selectedIndex === 2">
-      <div class="features-block--image">
+      <!-- <div class="features-block--image">
         <img src="./../assets/block.webp" alt="" />
-      </div>
+      </div> -->
       <div class="features-block--content flex">
         <div class="features-block--content-title">
           <h3>Quick and Nearby</h3>
@@ -65,9 +65,9 @@ const selectedIndex = ref(0)
     </div>
 
     <div class="features-block flex" v-if="selectedIndex === 3">
-      <div class="features-block--image">
+      <!-- <div class="features-block--image">
         <img src="./../assets/block.webp" alt="" />
-      </div>
+      </div> -->
       <div class="features-block--content flex">
         <div class="features-block--content-title">
           <h3>Set Up in Seconds</h3>
@@ -79,9 +79,9 @@ const selectedIndex = ref(0)
     </div>
 
     <div class="features-block flex" v-if="selectedIndex === 4">
-      <div class="features-block--image">
+      <!-- <div class="features-block--image">
         <img src="./../assets/block.webp" alt="" />
-      </div>
+      </div> -->
       <div class="features-block--content flex">
         <div class="features-block--content-title">
           <h3>No Hidden Fees</h3>
@@ -97,7 +97,7 @@ const selectedIndex = ref(0)
 <style scoped lang="scss">
 @use './../styles/variables' as variables;
 .features {
-  margin-top: 100px;
+  margin-top: 50px;
   margin-bottom: 100px;
   background-color: variables.$text-invert;
   border-radius: 30px;
@@ -148,7 +148,8 @@ const selectedIndex = ref(0)
   &-block {
     max-height: 550px;
     column-gap: 2.4rem;
-    // overflow: hidden;
+    justify-content: center;
+    text-align: center;
     &--image {
       max-width: 480px;
       height: 100%;
@@ -165,13 +166,14 @@ const selectedIndex = ref(0)
       color: variables.$text-secondary;
       &-title {
         h3 {
-          font-size: 2.25rem;
+          font-size: 3rem;
           font-weight: 500;
         }
       }
       &-description {
-        font-size: 1rem;
+        font-size: 2rem;
         font-weight: 200;
+        min-height: 100px;
       }
     }
   }
